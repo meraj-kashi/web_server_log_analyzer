@@ -1,0 +1,15 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Log analysis</title>
+      {% else %}
+      <title>Welcome to Log analysis</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Log analysis: <a href="/log_analysis">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+        <p>{{ output }}</p>
+    </body>
+</html>

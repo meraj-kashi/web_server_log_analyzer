@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Web Server Log Analyzer</h1>
+<form action="" method="post" enctype="multipart/form-data" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.content.label }}<br>
+        {{ form.content() }}
+    </p>
+
+    <p>
+        {{ form.config.label }}<br>
+        {{ form.config() }}
+    </p>
+
+    <p>
+        {{ form.start_time.label }}<br>
+        {{ form.start_time(size=32) }}
+    </p>
+    <p>
+        {{ form.end_time.label }}<br>
+        {{ form.end_time(size=32) }}
+    </p>
+    <p>
+        {{ form.status_code.label }}<br>
+        {{ form.status_code(size=32) }}
+    </p>
+    <p>
+        {{ form.source_ip.label }}<br>
+        {{ form.source_ip(size=32) }}
+    </p>
+    <p>
+        {{ form.os.label }}<br>
+        {{ form.os(size=32) }}
+    </p>
+    <p>
+        {{ form.browser.label }}<br>
+        {{ form.browser(size=32) }}
+    </p>
+    <p>
+        {{ form.user_regex_syntax.label }}<br>
+        {{ form.user_regex_syntax(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
